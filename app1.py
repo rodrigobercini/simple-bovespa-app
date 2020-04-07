@@ -33,13 +33,13 @@ for tic in nsdq.index:
 app.layout = html.Div([
                 html.H1('Bovespa Dashboard (Dados do Yahoo Finance)'),
                 html.Div([
-                        html.H3('Selecionar ação:', style={'paddingRight':'30px'}),
+                        html.H3('Selecionar ação:', style={'paddingRight':'40px'}),
                         dcc.Dropdown(id='my_stock_picker',
                              options = options,
                              value=['PETR4.SA'],
                              multi=True
                          )
-              ], style={'display':'inline-block','verticalAlign':'top', 'width':'30%'}),
+              ], style={'display':'inline-block','verticalAlign':'top', 'width':'40%'}),
                 html.Div([html.H3('Selecionar período:'),
                           dcc.DatePickerRange(id='my_date_picker',
                                               min_date_allowed=datetime(1993,1,1),
@@ -72,7 +72,7 @@ def update_graph(n_clicks, stock_ticker, start_date, end_date):
     
     traces = []
     for tic in stock_ticker:
-        df = yf.download(tic, 'yahoo', start, end)
+        df = yf.download(tic, start, end)
         traces.append({'x':df.index,'y':df['Close'], 'name':tic})
         
     fig = {'data':traces,

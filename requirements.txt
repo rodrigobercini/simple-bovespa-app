@@ -8,9 +8,8 @@ dash-renderer==0.12.1
 decorator==4.3.0
 nbformat==4.4.0
 gunicorn
-numpy==1.14.2
-pandas==0.22.0
-pandas-datareader==0.6.0
+numpy
+pandas
 plotly==2.5.1
 python-dateutil==2.7.2
 pytz==2018.4
