@@ -11,7 +11,7 @@ import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input,Output,State
 import pandas as pd
-import pandas_datareader.data as web
+import yfinance as yf
 from datetime import datetime
 
 app = dash.Dash()
@@ -72,7 +72,7 @@ def update_graph(n_clicks, stock_ticker, start_date, end_date):
     
     traces = []
     for tic in stock_ticker:
-        df = web.DataReader(tic, 'yahoo', start, end)
+        df = yf.download(tic, 'yahoo', start, end)
         traces.append({'x':df.index,'y':df['Close'], 'name':tic})
         
     fig = {'data':traces,
