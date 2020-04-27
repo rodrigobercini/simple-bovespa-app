@@ -6,4 +6,4 @@ Construído com [Dash](https://plotly.com/dash/), utiliza dados do Yahoo Finance
 
 Para conferir o webapp: https://fast-fortress-49697.herokuapp.com/.
 
-[Chart](Chart.jpg)
+![Chart](Chart.jpg)
