@@ -2,7 +2,7 @@
 """
 Created on Fri Mar 27 15:44:41 2020
 
-@author: Andrea
+@author: Rodrigo
 """
 
 import dash
