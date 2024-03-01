@@ -3,7 +3,7 @@ click==6.7
 Cython==0.28.2
 dash==0.21.0
 dash-core-components==0.22.1
-dash-html-components==0.10.0
+dash-html-components==2.0.0
 dash-renderer==0.12.1
 decorator==4.3.0
 nbformat==4.4.0
